@@ -1,17 +1,16 @@
 import json
 
-sampleJson = """{"key1": "value1", "key2": "value2"}"""
-# write code to print the value of key2
 
-json_data = json.loads(sampleJson)
+# PYnative
+data = {"key1" : "value1", "key2" : "value2"}
 
-print(json_data["key2"])
+json_data = json.dumps(data, indent = 4)
 
-# reqres example data
+print(json_data)
 
-reqres_data = '''
-    
-    {
+#reqres sample data
+
+reqres_data = {
     "page": 2,
     "per_page": 6,
     "total": 12,
@@ -40,9 +39,7 @@ reqres_data = '''
         }
     ]
 }
-'''
-json_reqres = json.loads(reqres_data)
 
-print(json_reqres['page'])
+json_reqres = json.dumps(reqres_data, indent = 4)
 
-print(json_reqres['data'][0]['first_name'])
+print(json_reqres)
