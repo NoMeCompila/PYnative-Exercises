@@ -39,3 +39,4 @@ print("Type of decoded object from JSON Data")
 print(type(p1))
 print("Person Details")
 print(p1.name, p1.last_name)
+
