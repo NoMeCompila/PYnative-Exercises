@@ -14,3 +14,4 @@ l2 = list(reversed(l1))
 
 for i in l2:
     print(i, end=" ")
+1
