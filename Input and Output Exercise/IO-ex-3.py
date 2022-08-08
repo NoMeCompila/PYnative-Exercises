@@ -3,6 +3,9 @@ Convert Decimal number to octal using print() output formatting
 """
 
 def parse_octal():
+    """
+    :return: None  
+    """
     try:
         x = int(input("Enter a number to convert: "))
         print(f"number {x} in octal is:{oct(x)}")
