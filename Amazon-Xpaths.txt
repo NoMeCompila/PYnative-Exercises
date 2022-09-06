@@ -1,0 +1,41 @@
+# Xpaths de la home de amazon
+
+# selecciona el burgermenu que contiene las categorias de los productos
+$x('//div[@id="nav-main"]//a//span/text()').map(x => x.wholeText)
+['Todo']
+
+# Selecciona las categorias principales del burger menu
+$x('(//div[@id="hmenu-content"]//ul//li//div[@class="hmenu-item hmenu-title "])[position()<5]/text()').map(x=>x.wholeText)
+['contenido y dispositivos digitales', 'buscar por departamento', 'programas y funcionalidades', 'ayuda y configuración']
+
+# Retorna las subcategorias del burger menu
+$x('(//div[@id="hmenu-content"]//ul//li//a//div)[position()<=37]/text()').map(x=>x.wholeText)
+
+['Amazon Music', 'E-readers Kindle y Libros', 'Appstore para Android', 'Electrónicos', 'Computadoras', 'Smart Home',
+'Arte y Artesanías', 'Automotriz', 'Bebé', 'Belleza y Cuidado Personal', 'Moda para Mujer', 'Moda para Hombre',
+'Moda para Niña', 'Moda para Niño', 'Salud y Hogar', 'Hogar y Cocina', 'Industrial y Científico', 'Equipaje',
+'Películas y Televisión', 'Insumos para mascotas', 'Software', 'Deportes y Aire Libre',
+'Herramientas y Mejoramiento del Hogar', 'Juguetes y juegos', 'Videojuegos', 'ver todo', 'ver menos',
+'Tarjetas de Regalo', 'Amazon Live', 'Tienda Internacional', 'ver todo', 'ver menos', 'menú principal',
+'menú principal', 'menú principal']
+
+# selecciona las imagenes de las opfertas de la homepage de amazon
+$x('(//div[@class="a-cardui fluid-fat-image-link fluid-card fluid-fat-image-link"]//div[@class="a-cardui-body"]//a//div//img/@src)').map(x => x.value)
+resultado
+
+1: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop2x._SY608_CB627424361_.jpg"
+2: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_260x260._SY608_CB442725065_.jpg"
+3: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_2x._SY608_CB432774344_.jpg"
+4: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Deals__2x._SY608_CB430401031_.jpg"
+5: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_2x._SY608_CB431800964_.jpg"
+6: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg"
+7: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Laptops_379x304_1X_en_US._SY304_CB418608471_.jpg"
+8: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Desktop_Dash_Kindle_1x._SY304_CB639752818_.jpg"
+9: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/Fuji_Dash_en_US._SY304_CB641328052_.jpg"
+10: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_StripLighting_379x304_1X_en_US._SY304_CB418597476_.jpg"
+11: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Pets_1X._SY304_CB639746743_.jpg"
+12: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Fitness_1X._SY304_CB639748186_.jpg"
+13: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Toys_1X._SY304_CB639759658_.jpg"
+length: 14
+
+

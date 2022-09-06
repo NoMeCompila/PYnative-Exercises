@@ -1,0 +1,41 @@
+webpage: https://quotes.toscrape.com/
+
+# Obtiene las 10 primeras frases
+$x('//div[@class="quote"]//span[@class="text"]/text()').map(x => x.wholeText)
+
+# La primer frase
+$x('(//div[@class="quote"]//span[@class="text"])[1]/text()').map(x => x.wholeText)
+
+# Obtiene a todos los autores
+$x('//div[@class="quote"]//span//small/text()').map(x => x.wholeText)
+
+# Localizar a Marilyn Monroe
+$x('//div[@class="quote"]//span//small[contains(text(),"Marilyn Monroe")]/text()').map(x => x.wholeText)
+
+# Get Login
+$x('(//div[@class = "row header-box"]//div//p//a)/text()').map(x => x.wholeText)
+
+# get All tags
+$x('//div[@class="tags"]//a/text()').map(x => x.wholeText)
+
+# get Tittle
+$x('//div//h1//a/text()').map(x => x.wholeText)
+
+# Get Subtittle
+$x('//div//h2/text()').map(x => x.wholeText)
+
+
+webpage: http://books.toscrape.com/catalogue/category/books_1/index.html
+
+# Get all book's tittle with wildcard notation
+$x('//h3//*/text()').map(x => x.wholeText)
+
+# side-var
+$x('//div[@class="side_categories"]/ul[@class="nav nav-list"]/li/ul/li/a/text()').map(x => x.wholeText)
+
+
+# descripcion
+$x('(//article[@class="product_page"]//p)[4]/text()').map(x => x.wholeText)
+
+# stock
+$x('(//table//tbody//tr)[6]//td/text()').map(x => x.wholeText)
